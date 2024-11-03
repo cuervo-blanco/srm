@@ -8,6 +8,7 @@ NAME
 SYNOPSIS
        srm [OPTION]... <file_path>
        srm --list
+       srm --show-path
        srm --unlink [OPTION]... <file_name>...
        srm --unlink-all
        srm --restore [OPTION]... <file_name> [--destination <path>]
@@ -24,8 +25,12 @@ OPTIONS
        --verbose
               Enable verbose output for detailed information on operations.
 
-       --list Display information about the collector's contents, including
+       --list
+              Display information about the collector's contents, including
               file names, sizes, and original paths.
+
+       --show-path
+              Display the collector's location in the system
 
        --unlink <file_name>...
               Delete specified files from the collector.
