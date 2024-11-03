@@ -1,5 +1,4 @@
-🦀 + 📦
-# SRM Installation Guide
+# 🦀 SRM Installation Guide 🛡️
 
 This guide explains how to manually install `srm`, a Safe Remove Tool for
 managing files securely.
