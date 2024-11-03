@@ -46,7 +46,8 @@ to the appropriate directory (/usr/local/bin for Unix or /usr/bin for Windows)
 
 1. **Run the Installation Script**
    ```bash
-   cd srm
+   git clone https://github.com/cuervo-blanco/srm.git
+   cd ./srm
    ./install.sh
    ```
 
