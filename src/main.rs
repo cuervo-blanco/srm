@@ -340,6 +340,7 @@ fn display_help() {
         Usage:\n\
         \t srm [--verbose] <file_path>                   Move a file to the collector.\n\
         \t srm --list                                    Display information about the collector's contents.\n\
+        \t srm --show-path                               Display the path to the collector directory.\n\
         \t srm --unlink [--verbose] <file_name> [...]    Delete specific files from the collector.\n\
         \t srm --unlink-all                              Delete all files from the collector with confirmation.\n\
         \t srm --restore [--verbose] <file_name> [--destination <path>]  Restore a file to its original or specified path.\n\
@@ -352,6 +353,7 @@ fn display_help() {
         Examples:\n\
         \t srm myfile.txt\n\
         \t srm --list\n\
+        \t srm --show-path\n\
         \t srm --unlink myfile.txt anotherfile.txt\n\
         \t srm --unlink-all\n\
         \t srm --restore myfile.txt\n\
@@ -423,6 +425,10 @@ fn main() {
                     eprintln!("Error restoring file {}: {}", file, e);
                 }
             }
+        }
+        Some("--show-path") => {
+            let collector = collector_path();
+            println!("Collector path: {}", collector.display());
         }
         Some(_file_path) => {
             for file in args.iter().skip(1) {
