@@ -1,27 +1,40 @@
 # 🦀 SRM: Safe Remove Tool 🛡️
 
-A Rust-based alternative for the classic `rm`.
+A Rust-based alternative to the classic `rm`:
 `srm` safely moves files to a temporary "collector" for optional restoration
 or permanent deletion, providing an added layer of security and control.
 
 The fact is, all of us have accidentally rm'd something that we shouldn't have.
 So last time this happened to me, I said "enough is enough, we ought to have
 a safe rm tool"... and safe? Safe is synonymous with Rust. So that's how this
-came about. Let me tell show you why:
+came about. Let me show you why:
 
 ### Key Capabilities
 - **Safe File Removal**: Move files to a collector instead of deleting them
     immediately, allowing for easy recovery.
 - **Selective Deletion**: Permanently delete specific files or all files in
-    the collector with a single command.
+    the collector with a single command, with confirmation prompts to
+    prevent accidental deletion.
 - **Restoration Options**: Restore individual files to their original or
     specified locations, or restore all files in the collector at once.
 - **Detailed File Management**: List collector contents with file details and
     view the collector's system path.
+- **Audit Logging**: Maintain log files within the collector to track file
+    movements and restorations for accountability.
 
-Contributions are welcome, and stay tuned for continuous updates
+Contributions are welcome, stay tuned for continuous updates
 and new features!
 
+## Potential Future Enhancements
+
+```
+    [] Selectable location for collector
+    [] Optional prompt (no prompt when deleting)
+    [] Allow users to set automatic retention periods for files in
+       the collector. They can be restored or permanently deleted.
+    [] Encryption for sensitive files
+    [] File Categorization
+```
 ---
 
 # Installation Guide
